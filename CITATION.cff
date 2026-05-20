@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite both the associated manuscript and this repository."
+title: "Arfania_coder: Data and R code for the CAF LTAR tile-drainage delta18O-PO4 study"
+abstract: >-
+  Reproducible data and R code accompanying Arfania et al. (in review),
+  "Tillage x Flow Regime Interaction Controls Phosphorus Source Dynamics in
+  Tile Drainage: Integrating Continuous Discharge Monitoring, Water Residence
+  Time, and Phosphate Oxygen Isotopes," submitted to JGR Biogeosciences.
+type: software
+authors:
+  - family-names: Arfania
+    given-names: Hamed
+    affiliation: "UF/IFAS Everglades Research and Education Center; (formerly) University of Idaho"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Kayler
+    given-names: Zachary E.
+    affiliation: "University of Idaho"
+  - family-names: Strawn
+    given-names: Daniel G.
+    affiliation: "University of Idaho"
+  - family-names: Brooks
+    given-names: Erin S.
+    affiliation: "University of Idaho"
+  - family-names: Laan
+    given-names: Maggi
+    affiliation: "University of Idaho"
+license: MIT
+license-data: CC-BY-4.0
+repository-code: "https://github.com/<your-github-username>/Arfania_coder"
+keywords:
+  - phosphorus
+  - tile drainage
+  - phosphate oxygen isotopes
+  - delta18O-PO4
+  - tillage
+  - LTAR
+  - Cook Agronomy Farm
+  - biogeochemistry
+  - water residence time
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Arfania
+      given-names: Hamed
+    - family-names: Kayler
+      given-names: Zachary E.
+    - family-names: Strawn
+      given-names: Daniel G.
+    - family-names: Brooks
+      given-names: Erin S.
+    - family-names: Laan
+      given-names: Maggi
+  title: "Tillage x Flow Regime Interaction Controls Phosphorus Source Dynamics in Tile Drainage: Integrating Continuous Discharge Monitoring, Water Residence Time, and Phosphate Oxygen Isotopes"
+  journal: "Journal of Geophysical Research: Biogeosciences"
+  year: 2026
+  status: "in review"
