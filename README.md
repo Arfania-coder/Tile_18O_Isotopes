@@ -1,4 +1,4 @@
-# Arfania_coder
+# Tile_18O_Isotopes
 
 **Data and R code accompanying:**
 
@@ -22,9 +22,8 @@ This repository contains all raw input data and R scripts required to reproduce 
 ---
 
 ## Repository structure
-
 ```
-Arfania_coder/
+Tile_18O_Isotopes/
 ├── R/
 │   ├── 00_run_all.R           # master runner — sources both scripts in order
 │   ├── 01_main_analysis.R     # full pipeline: Tables 1–8, Figs 2–4, 6–7, S1–S2
@@ -40,8 +39,6 @@ Arfania_coder/
 └── README.md
 ```
 
----
-
 ## Reproducing the analysis
 
 ### Requirements
@@ -51,12 +48,12 @@ Arfania_coder/
 
 ### Run
 
-1. Clone the repository: `git clone https://github.com/<your-username>/Arfania_coder.git`
+1. Clone the repository: `git clone https://github.com/Arfania-coder/Tile_18O_Isotopes.git`
 2. Open the project from the repository root in RStudio (or set R's working directory to the repo root).
 3. In the R console:
-   ```r
+```r
    source("R/00_run_all.R")
-   ```
+```
 
 All paths are resolved with the `here` package, so the scripts work identically on Windows, macOS, and Linux without modification. Outputs are written to `output/` and `figures/`.
 
@@ -95,16 +92,19 @@ Detailed column definitions, units, sampling design, and quality-control flags a
 ## Key methods and equations
 
 ### Chang & Blake (2015) equilibrium equation
-$$\delta^{18}\mathrm{O}\text{-}\mathrm{PO}_4^{\,(\mathrm{eq})} = \exp\!\left[\frac{14.43}{T_K} - 0.02654\right] \cdot (\delta^{18}\mathrm{O}\text{-}\mathrm{H}_2\mathrm{O} + 1000) - 1000$$
+
+δ¹⁸O–PO₄(eq) = exp[(14.43 / T_K) − 0.02654] × (δ¹⁸O–H₂O + 1000) − 1000
 
 In this revision (script v2.0), δ¹⁸O–PO₄(eq) is computed *per sample* using the treatment-specific tile-drain δ¹⁸O–H₂O closest in time to each grab and the daily-mean tile water temperature derived from the 15-min logger record. Fixed-equilibrium (δ¹⁸O–H₂O = −14.1 ‰, T = 5 °C → 11.2 ‰) results are retained as a sensitivity check.
 
 ### Flow regime classification
+
 Daily-mean tile discharge ≥ treatment-specific Q75 → "Event"; otherwise → "Baseflow".
 
 ### Mean transit time
-- **Damping ratio:** $\tau = 1 / \left(\omega \cdot \sqrt{(1/DR^2) - 1}\right)$, $DR = \sigma_{\mathrm{tile}} / \sigma_{\mathrm{precip}}$, $\omega = 2\pi / 365.25$.
-- **Amplitude ratio:** sinusoidal fit to δ¹⁸O–H₂O time series in precipitation and tile drain; Fyw (young water fraction) = $A_{\mathrm{tile}} / A_{\mathrm{precip}}$.
+
+- **Damping ratio:** τ = 1 / (ω × √((1/DR²) − 1)), where DR = σ_tile / σ_precip and ω = 2π / 365.25.
+- **Amplitude ratio:** sinusoidal fit to δ¹⁸O–H₂O time series in precipitation and tile drain; Fyw (young water fraction) = A_tile / A_precip.
 
 Fyw is reported as a tracer-derived index, not a literal residence-time estimate (Kirchner, 2016).
 
@@ -139,14 +139,3 @@ If you use this code or data, please cite both the manuscript (citation will be 
 
 - **Code:** MIT License (see `LICENSE`).
 - **Data:** Creative Commons Attribution 4.0 International (CC BY 4.0).
-
-## Contact
-
-Hamed Arfania
-Postdoctoral Research Associate, Soil, Water, and Nutrient Management Laboratory
-UF/IFAS Everglades Research and Education Center (EREC), Belle Glade, FL
-GitHub: [@<your-github-username>](https://github.com/<your-github-username>)
-
-## Acknowledgments
-
-This work was supported by USDA-ARS LTAR (R. J. Cook Agronomy Farm), the NSF Science and Technologies for Phosphorus Sustainability (STEPS) Center (CBET-2019435), and UF/IFAS. We thank Dr. Z. E. Kayler (University of Idaho) for site access, the LTAR network for continuous monitoring infrastructure, and Dr. D. Jaisi (University of Delaware) for δ¹⁸O–PO₄ method support.
