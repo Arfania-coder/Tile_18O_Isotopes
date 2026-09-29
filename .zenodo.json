@@ -1,0 +1,17 @@
+{
+  "title": "Tile_18O_Isotopes: data and code for flow-dependent phosphate oxygen-isotope signatures in tile drainage",
+  "upload_type": "dataset",
+  "description": "Continuous tile-drain discharge, water temperature, dissolved reactive phosphorus, dual water isotopes and phosphate oxygen isotopes (d18O-PO4) from two adjacent long-term tillage systems (conventional tillage and no-till) at the R.J. Cook Agronomy Farm LTAR site, Pullman, Washington, USA, September 2022 to July 2024, together with the complete R analysis pipeline that reproduces every table and figure in Arfania et al. (2026), Journal of Geophysical Research: Biogeosciences.",
+  "creators": [
+    {"name": "Arfania, Hamed", "affiliation": "University of Idaho"},
+    {"name": "Kayler, Zachary E.", "affiliation": "University of Idaho"},
+    {"name": "Strawn, Daniel G.", "affiliation": "University of Idaho"},
+    {"name": "Brooks, Erin S.", "affiliation": "University of Idaho"},
+    {"name": "Laan, Maggi", "affiliation": "University of Idaho"}
+  ],
+  "keywords": ["phosphate oxygen isotopes", "tile drainage", "conventional tillage", "no-till", "deuterium excess", "young water fraction", "legacy phosphorus", "R.J. Cook Agronomy Farm", "LTAR"],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng"
+}
